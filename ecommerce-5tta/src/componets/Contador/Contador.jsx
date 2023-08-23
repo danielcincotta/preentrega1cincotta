@@ -7,8 +7,10 @@ const Contador = () => {
     }
 
     return (
-        <div className='text-center'><span className='fs-2 fw-bold'>{count}</span>
-            <button onClick={agregar}>comprar</button></div>
+        <div className='text-center'>
+            <span className='fs-2 fw-bold'>{count}</span>
+            <button onClick={agregar}>comprar</button>
+        </div>
     )
 }
 
