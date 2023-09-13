@@ -1,17 +1,15 @@
 import { useState } from 'react'
+import { useContador } from '../hooks/useContador'
 
-const Contador = () => {
-    const [count, setCount] = useState(0)
-    const agregar = () => {
-        setCount(count + 1)
-    }
-
-    return (
-        <div className='text-center'>
-            <span className='fs-2 fw-bold'>{count}</span>
-            <button onClick={agregar}>comprar</button>
-        </div>
-    )
+function Contador() {
+    const { count, agregar, eliminar, carrito } = useContador()
+    return <div className='text-center'>
+        <span className='fs-2 fw-bold'>{count}</span>
+        <button onClick={agregar}>+</button>
+        <button onClick={carrito}>agregar a carrito</button>
+        <button onClick={eliminar}>-</button>
+    </div>
 }
+
 
 export default Contador
