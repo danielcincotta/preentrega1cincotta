@@ -1,10 +1,16 @@
 
-import { useState } from 'react'
-import { useContador } from '../hooks/useContador'
+import { useContext, useState } from 'react'
+
 import Contador from '../Contador/Contador'
+
+
+
 import "../ItemDetail/itemdetail.css"
+
+
 const ItemDetail = ({ producto }) => {
 
+  
 
   return (
     <div className="card mb-3">
@@ -18,12 +24,13 @@ const ItemDetail = ({ producto }) => {
             <p className="card-text">{producto.descripcion}</p>
             <p>precio: {producto.precio}</p>
             <p className="card-text"><small className="text-muted">stock: {producto.stock}</small></p>
-            <Contador />
+            <Contador/>
           </div>
         </div>
       </div>
     </div>
   )
 }
+
 
 export default ItemDetail
