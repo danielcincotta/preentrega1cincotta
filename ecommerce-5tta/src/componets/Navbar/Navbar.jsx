@@ -16,7 +16,7 @@ function Navbar() {
               <NavLink className="nav-link" to="/categoria/mouse">mouse</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/categoria/parlantes">parlantes</NavLink>
+              <NavLink className="nav-link" to="/categoria/audio">parlantes</NavLink>
             </li>
           </ul>
           <CartWidget />
