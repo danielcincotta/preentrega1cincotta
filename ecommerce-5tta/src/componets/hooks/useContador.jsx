@@ -1,6 +1,9 @@
 import { useState } from 'react'
-export const useContador = () => {
+import { useCartContext } from '../../context/CartContext'
+
+export const useContador = ({product}) => {
     const [count, setCount] = useState(0)
+    const {addProduct , cartList} = useCartContext()
     const agregar = () => {
         setCount(count + 1)
     }
@@ -10,8 +13,9 @@ export const useContador = () => {
         }
     }
     const carrito = () => {
-        if (count > 0) {
-            console.log("se agregaron al carrito " + count + " productos")
+        if (count > 0) 
+        {  
+            addProduct({...product, quantity: count})         
         }
     }
     return { count, agregar, eliminar, carrito }

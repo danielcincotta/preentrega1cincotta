@@ -11,11 +11,11 @@ const ItemDetailContainer = () => {
 
        useEffect(()=>{
         const db = getFirestore()
-        const queryDoc = doc(db, 'products', 'epvBDqZTugGO6B5DNNmT') // id useParams
+        const queryDoc = doc(db, 'products', pid) // id useParams
          getDoc(queryDoc)
         .then(resp => ( { id: resp.id, ...resp.data() } ) )
         .then(resp => {
-          console.log(resp)
+         
             setLoading (false)
             setProduct(resp)
             

@@ -1,9 +1,14 @@
+import { Link } from "react-router-dom"
+import { useCartContext } from "../../context/CartContext"
 import "../CartWidget/cartwidget.css"
 function CartWidget() {
+  const {totalProducts} = useCartContext()
   return (
     <div>
-    <span>0</span>
+    <span>{totalProducts()}</span>
+    <Link to="./carrito">
     <button className="btn btn-outline carrito"></button>
+    </Link>
     </div>
   )
 }
